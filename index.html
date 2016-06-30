@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+	
+	<!-- <script type="text/javascript" src="js/jquery.js"></script>
+-->
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/btn_controll.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+<title>Yelp Dish Discovery</title>
+</head>
+<body>
+<header class="header">
+	<div class="title">Yelp Dish Discovery</div>
+	<div class="menu">
+		<button class="subtitle"- id="system_id">System</button>
+		<button class="subtitle" id="overview_id">Overview</button>
+		<button class="subtitle" id="data_id">Data</button>
+		<button class="subtitle" id="about_id">About</button>
+	</div>
+</header>
+<button class="slide_bar_btn" id="btn">More Restaurant</button>
+<div class="rest_list">
+	<table class="rest_table">
+		<thead>
+			<tr>
+				<th>Restaurants</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+<div class="right_side">
+	<div class="review_list">
+		<table class="review_table">
+			<thead>
+				<tr>
+					<th>Reviews</th>
+				</tr>
+			</thead>
+			<tbody id="reviews_move"></tbody>
+		</table>
+	</div>
+	<div class="popular_list">
+		<div class="score_list_avg">
+			<div class="title" id="score_avg_btn">Top Score(avg)</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+		</div>
+		<div class="score_list_min">
+			<div class="title" id="score_min_btn">Top Score(min)</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+		</div>
+		<div class="count_list">
+			<div class="title" id="frequent_btn">Most Frequent</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+			<div class="picked"></div>
+			<div class="detail">
+				<div class="info"></div>
+				<div class="info"></div>
+				<div class="info"></div>
+			</div>
+		</div>
+	</div>
+	<div class="draw_place"></div>
+</div>
+<!-- create the other page here -->
+<div class="subtitle_page overview" id="overview_page_id">
+	<div class="content">
+		<div class="abstract">
+			<h1>ABSTRACT</h1>
+			Consumers nowadays are bombarded with all sorts of food
+reviews, but in fact they require a more e cient recommendation
+service. In light of this, it would be of great
+convenience if there is a system to provide analysis on the
+reveiws and return a list of recommended delicacies by others
+users. Therefore, in this paper, we propose a recommendation
+system for dishes, empirically showing that it is
+feasible to extract sentiment and opinions to a dish out of
+its context.
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div class="introduction">
+			<h1>INTRODUCTION</h1>
+			With the growth of social media, corporations, such as
+Yelp, have accumulated a great number of user-generated
+reviews. In light of this, researches have been conducted
+with a view to nding the crucial information hidden in
+the context, aiming to nd the user's evaluation pertaining
+a certain service of an institution. Though a number
+of works have been proposed on the accurate sentiment interpretation
+towards reviews and recommendation, few has
+speci cally focus on dish-level analysis. Therefore, in this
+paper, we propose an approach and a system providing dish
+recommendation. We collect our data from Yelp Dataset
+Challenge, and after preprocessing, we transform all words
+in the corpus into high-dimension vectors, calculating the
+Euclidean distances among dishes and all the positive sentiment
+words. The results of experiments show that dishes of
+lower Euclidean distances with the positive sentiment words
+are the most recommended dishes by the users.
+		</div>
+	</div>
+
+</div>
+<div class="subtitle_page data" id="data_page_id">
+	<div class="content">
+		<h1>Datasets</h1>
+		<br>
+		<div class="data_content">
+			Datasets
+We use the data distributed in Yelp Data Challenge
+1
+and
+lter out the top 100 restaurants containing the most reviews,
+and we manually parse the menu of each restaurant
+from its offcial website. Out of those 100 restaurants, we
+winnowed out the restaurants with a complete menu in LasVegas,
+setting the reviews of those restaurants and their
+menus as our dataset. The total amount of restaurants their
+reviews are 69 and 95546 respectively.
+		</div>
+		<img src="image/yelpdatset.jpg" alt="">
+	</div>
+</div>
+<div class="subtitle_page about" id="about_page_id">
+	<div class="content_big">
+		<h1>About</h1>
+		<br>
+		<div class="about">
+			<div class="abouter">
+				<img src="image/Cychao.jpg" alt="">
+				<div class="content">
+					Chih-Yu Chao (趙之宇)
+					<br>
+					denffer18@gmail.com
+					<br>
+					Department of Computer Science
+					<br>
+					University of Taipei
+					<br></div>
+			</div>
+			<div class="abouter">
+				<img src="image/Chu.jpg" alt="">
+				<div class="content">
+					Yi-Fan Chu (曲奕帆)
+					<br>
+					tom8u4286@gmail.com
+					<br>
+					Department of Computer Science
+					<br>
+					University of Taipei
+					<br></div>
+			</div>
+			<div class="abouter">
+				<img src="image/YiHo.jpg" alt="">
+				<div class="content">
+					Yi Ho (何怡)
+					<br>
+					koibadkid@gmail.com
+					<br>
+					Department of Engineering Science and Ocean Engineering
+					<br>National Taiwan University
+					</div>
+			</div>
+			<div class="abouter">
+				<img src="image/FC.jpg" alt="">
+				<div class="content">
+					FC (飛膝)
+					<br>
+					yayayahahahaooii@gmail.com
+					<br>
+					Department of Computer Science
+					<br>University of Taipei</div>
+			</div>
+			<div class="abouter">
+				<img src="image/wang.png" alt="">
+				<div class="content">
+					Chuan-Ju Wang (王釧茹)
+					<br>
+					Associate Professor
+					<br>
+					Department of Computer Science
+					<br>
+					University of Taipei
+					<br></div>
+			</div>
+			<div class="abouter">
+				<img src="image/tsai.png" alt="">
+				<div class="content">
+					Ming-Feng Tsai (蔡銘峰)
+					<br>
+					Assistant Professor
+					<br>
+					Dept. of Computer Science
+					<br>
+					National Chengchi University
+					<br></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

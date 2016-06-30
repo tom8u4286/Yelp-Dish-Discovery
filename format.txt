@@ -1,0 +1,19 @@
+	restaurant_block toggle as google-play
+
+	reviews_block down to up
+
+	highlight first tiem of top dishes_block
+
+	fade in visualization
+
+V	*: little traingle mark (use after)
+V	use table to create restaurant_block and reviews_block
+V	change scrollbar style
+	draw that photo and restaurant_name in svg_viewer
+
+V	Restaurant"s"
+V	Review"s"
+V	Top Recommended
+V	Most Frequent
+
+	horizonal one-page style
