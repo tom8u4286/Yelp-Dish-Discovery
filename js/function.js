@@ -41,27 +41,45 @@ function create_picked_list(number) {
 			picked_dom_array[i].x = picked_json_array[rest_num].top_dishes[i].x;
 			picked_dom_array[i].y = picked_json_array[rest_num].top_dishes[i].y;
 			picked_dom_array[i].radius = picked_json_array[rest_num].top_dishes[i].count;
+
+
 			picked_dom_array[i].avg = picked_json_array[rest_num].top_dishes[i].score.toFixed(3);
-			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes_min[i].score.toFixed(3);
-			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes[i].count;
+
+			picked_dom_array[i].min = picked_json_array[rest_num].top_dishes[i].min_score.toFixed(3);
+
+			picked_dom_array[i].freq = picked_json_array[rest_num].top_dishes[i].count;
+
+
 			picked_dom_array[i].innerHTML = (i + 1) + ". " + picked_dom_array[i].name;
 		} else if (i >= 5 && i < 10) {
 			picked_dom_array[i].name = picked_json_array[rest_num].most_dishes_min[i - 5].name;
 			picked_dom_array[i].x = picked_json_array[rest_num].most_dishes_min[i - 5].x;
 			picked_dom_array[i].y = picked_json_array[rest_num].most_dishes_min[i - 5].y;
 			picked_dom_array[i].radius = picked_json_array[rest_num].most_dishes_min[i - 5].count;
-			picked_dom_array[i].avg = picked_json_array[rest_num].top_dishes[i - 5].score.toFixed(3);
+
+
+			picked_dom_array[i].avg = picked_json_array[rest_num].most_dishes_min[i - 5].score.toFixed(3);
+
 			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes_min[i - 5].min_score.toFixed(3);
-			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes[i - 5].count;
+
+			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes_min[i - 5].count;
+
+
 			picked_dom_array[i].innerHTML = ((i - 5) + 1) + ". " + picked_dom_array[i].name;
 		} else {
 			picked_dom_array[i].name = picked_json_array[rest_num].most_dishes[i - 10].name;
 			picked_dom_array[i].x = picked_json_array[rest_num].most_dishes[i - 10].x;
 			picked_dom_array[i].y = picked_json_array[rest_num].most_dishes[i - 10].y;
 			picked_dom_array[i].radius = picked_json_array[rest_num].most_dishes[i - 10].count;
-			picked_dom_array[i].avg = picked_json_array[rest_num].top_dishes[i - 10].score.toFixed(3);
-			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes_min[i - 10].score.toFixed(3);
+
+
+			picked_dom_array[i].avg = picked_json_array[rest_num].most_dishes[i - 10].score.toFixed(3);
+
+			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes[i - 10].min_score.toFixed(3);
+
 			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes[i - 10].count;
+
+
 			picked_dom_array[i].innerHTML = ((i - 10) + 1) + ". " + picked_dom_array[i].name;
 		}
 	}
@@ -74,27 +92,45 @@ function update_picked_array() {
 			picked_dom_array[i].x = picked_json_array[rest_num].top_dishes[i].x;
 			picked_dom_array[i].y = picked_json_array[rest_num].top_dishes[i].y;
 			picked_dom_array[i].radius = picked_json_array[rest_num].top_dishes[i].count;
+
+
 			picked_dom_array[i].avg = picked_json_array[rest_num].top_dishes[i].score.toFixed(3);
-			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes_min[i].score.toFixed(3);
-			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes[i].count;
+
+			picked_dom_array[i].min = picked_json_array[rest_num].top_dishes[i].min_score.toFixed(3);
+
+			picked_dom_array[i].freq = picked_json_array[rest_num].top_dishes[i].count;
+
+
 			picked_dom_array[i].innerHTML = (i + 1) + ". " + picked_dom_array[i].name;
 		} else if (i >= 5 && i < 10) {
 			picked_dom_array[i].name = picked_json_array[rest_num].most_dishes_min[i - 5].name;
 			picked_dom_array[i].x = picked_json_array[rest_num].most_dishes_min[i - 5].x;
 			picked_dom_array[i].y = picked_json_array[rest_num].most_dishes_min[i - 5].y;
 			picked_dom_array[i].radius = picked_json_array[rest_num].most_dishes_min[i - 5].count;
-			picked_dom_array[i].avg = picked_json_array[rest_num].top_dishes[i - 5].score.toFixed(3);
+
+
+			picked_dom_array[i].avg = picked_json_array[rest_num].most_dishes_min[i - 5].score.toFixed(3);
+
 			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes_min[i - 5].min_score.toFixed(3);
-			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes[i - 5].count;
+
+			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes_min[i - 5].count;
+
+
 			picked_dom_array[i].innerHTML = ((i - 5) + 1) + ". " + picked_dom_array[i].name;
 		} else {
 			picked_dom_array[i].name = picked_json_array[rest_num].most_dishes[i - 10].name;
 			picked_dom_array[i].x = picked_json_array[rest_num].most_dishes[i - 10].x;
 			picked_dom_array[i].y = picked_json_array[rest_num].most_dishes[i - 10].y;
 			picked_dom_array[i].radius = picked_json_array[rest_num].most_dishes[i - 10].count;
-			picked_dom_array[i].avg = picked_json_array[rest_num].top_dishes[i - 10].score.toFixed(3);
-			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes_min[i - 10].score.toFixed(3);
+
+
+			picked_dom_array[i].avg = picked_json_array[rest_num].most_dishes[i - 10].score.toFixed(3);
+
+			picked_dom_array[i].min = picked_json_array[rest_num].most_dishes[i - 10].min_score.toFixed(3);
+
 			picked_dom_array[i].freq = picked_json_array[rest_num].most_dishes[i - 10].count;
+
+
 			picked_dom_array[i].innerHTML = ((i - 10) + 1) + ". " + picked_dom_array[i].name;
 		}
 	}
