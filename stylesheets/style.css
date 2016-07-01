@@ -7,6 +7,7 @@
 /* line 20, ../sass/style.scss */
 body {
   background-color: white;
+  
   font-family: Comic Sans MS;
   overflow: hidden;
 }
@@ -237,6 +238,8 @@ header .menu .subtitle:focus:after {
 }
 /* line 252, ../sass/style.scss */
 .right_side .review_list .review_table tbody {
+  /*font-family: "Times New Roman", Times, serif;*/
+  font-family: "Times New Roman", Times, serif;
   opacity: 0;
   position: relative;
   top: 0px;

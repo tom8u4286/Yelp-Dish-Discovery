@@ -232,16 +232,18 @@ header {
         .review_table {
             width: 26vw;
             height: 93vh;
-
+            font-family: Satyr10;
             thead {
                 tr {
                     display: block;
                     position: relative;
+                    
                     font-size: $class_font_size;
 
                     th {
                         padding: 0.8vh;
                         width: 26vw;
+
                         text-align: center;
                         font-weight: bold;
                         color: $dark_color;
