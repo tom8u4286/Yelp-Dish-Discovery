@@ -191,8 +191,8 @@ window.onload = function(argument) {
 						detail_dom_array[i].style.height = "0px";
 					}
 					detail_dom_array[number].style.height = "10vh";
-					info_dom_array[number * 3].innerHTML = "Score(avg):" + picked_dom_array[number].avg;
-					info_dom_array[number * 3 + 1].innerHTML = "Score(min):" + picked_dom_array[number].min;
+					info_dom_array[number * 3].innerHTML = "Score (avg):" + picked_dom_array[number].avg;
+					info_dom_array[number * 3 + 1].innerHTML = "Score (min):" + picked_dom_array[number].min;
 					info_dom_array[number * 3 + 2].innerHTML = "Frequency:" + picked_dom_array[number].freq;
 					if (number < 5) {
 						info_dom_array[number * 3].style.color = "red";

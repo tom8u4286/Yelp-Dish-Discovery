@@ -39,7 +39,7 @@ header::before {
 }
 /* line 51, ../sass/style.scss */
 header .title {
-  font-size: 3vh;
+  font-size: 2.5vh;
   display: inline-block;
   vertical-align: middle;
 }
@@ -68,11 +68,11 @@ header .menu .subtitle {
 /* line 81, ../sass/style.scss */
 header .menu .subtitle:hover {
   cursor: pointer;
-  color: #2E86C1;
+  color: #D6EAF8;
 }
 /* line 86, ../sass/style.scss */
 header .menu .subtitle:focus {
-  color: #2E86C1;
+  color: #D6EAF8;
 }
 /* line 89, ../sass/style.scss */
 header .menu .subtitle:focus:after {
@@ -118,7 +118,7 @@ header .menu .subtitle:focus:after {
 /* line 129, ../sass/style.scss */
 .slide_bar_btn:hover {
   cursor: pointer;
-  color: #2E86C1;
+  color: #D6EAF8;
 }
 /* line 133, ../sass/style.scss */
 .slide_bar_btn:hover:before {

@@ -166,7 +166,7 @@ function draw_axis(svg) {
 		y: (h * legend_y) + 5,
 		fill: most_point_color
 	});
-	legend_text1.innerHTML = 'Top Score(avg)';
+	legend_text1.innerHTML = 'Top Score (avg)';
 	legend_text1.id = 't1';
 	g1.appendChild(legend_text1);
 	g1.appendChild(legend_circle1);
@@ -215,7 +215,7 @@ function draw_axis(svg) {
 		y: (h * legend_y) + 25 + 5,
 		fill: most_point_min_color
 	});
-	legend_text4.innerHTML = 'Top Score(min)';
+	legend_text4.innerHTML = 'Top Score (min)';
 	g4.appendChild(legend_text4);
 	g4.appendChild(legend_circle4);
 
@@ -224,7 +224,7 @@ function draw_axis(svg) {
 	var restaurant_title = makeSVG('text', {
 		x: (w * 0.01),
 		y: (h * 0.07),
-		fill: "rgba(56, 89, 100, 1)",
+		fill: "#2E86C1",
 		'font-size': '1.5em'
 	});
 	restaurant_title.innerHTML = rest_json.menu[rest_num].restaurant_name;
