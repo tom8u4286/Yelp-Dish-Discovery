@@ -188,6 +188,7 @@ header .menu .subtitle:focus:after {
   -moz-box-shadow: 0px 0px 0px 0px white;
   -webkit-box-shadow: 0px 0px 0px 0px white;
   box-shadow: 0px 0px 0px 0px white;
+  border-radius:10px;
 }
 /* line 204, ../sass/style.scss */
 .rest_list .rest_table tbody tr td div:hover {
@@ -197,6 +198,7 @@ header .menu .subtitle:focus:after {
   -moz-box-shadow: 1.2px 1.2px 1px 1px #21618C;
   -webkit-box-shadow: 1.2px 1.2px 1px 1px #21618C;
   box-shadow: 1.2px 1.2px 1px 1px #21618C;
+  border-radius:10px;
 }
 
 /* line 218, ../sass/style.scss */
@@ -298,6 +300,7 @@ header .menu .subtitle:focus:after {
   -moz-box-shadow: 1.2px 1.2px 1px 1px #21618C;
   -webkit-box-shadow: 1.2px 1.2px 1px 1px #21618C;
   box-shadow: 1.2px 1.2px 1px 1px #21618C;
+  border-radius:10px;
 }
 /* line 313, ../sass/style.scss */
 .right_side .popular_list .detail {
@@ -496,11 +499,12 @@ header .menu .subtitle:focus:after {
 /* line 486, ../sass/style.scss */
 .overview .content {
   display: inline-block;
-  width: 70vw;
-  margin: 3vh;
+  width: 85vw;
+  margin: 2vh;
   margin-top: 5vh;
   line-height: 1.5em;
   color: #154360;
+  padding-bottom: 40pt;
 }
 /* line 494, ../sass/style.scss */
 .overview .content h2 {
@@ -562,6 +566,7 @@ header .menu .subtitle:focus:after {
   text-align: center;
   overflow: auto;
   font-size: 1.3vw;
+  padding-bottom: 40pt;
 }
 /* line 548, ../sass/style.scss */
 .about .content_big {
@@ -600,17 +605,20 @@ header .menu .subtitle:focus:after {
   -moz-box-shadow: 1px 1px 1px 0px #2E86C1;
   -webkit-box-shadow: 1px 1px 1px 0px #2E86C1;
   box-shadow: 1px 1px 1px 0px #2E86C1;
+  border-radius:10px;
 }
 /* line 577, ../sass/style.scss */
 .about .abouter:hover {
   -moz-box-shadow: 2px 2px 2px 1px #2E86C1;
   -webkit-box-shadow: 2px 2px 2px 1px #2E86C1;
   box-shadow: 2px 2px 2px 1px #2E86C1;
+  border-radius:10px;
 }
 /* line 581, ../sass/style.scss */
 .about .abouter img {
   max-height: 80%;
   margin: 2%;
+  border-radius:100px;
 }
 /* line 587, ../sass/style.scss */
 .about .abouter:nth-child(2n+1) img {
@@ -755,9 +763,10 @@ mark {
 
 /* line 691, ../sass/style.scss */
 .onfocus {
-  background-color: #4b6973;
+  background-color: #21618C;
   -moz-box-shadow: 1.2px 1.2px 1px 1px #2E86C1;
   -webkit-box-shadow: 1.2px 1.2px 1px 1px #2E86C1;
   box-shadow: 1.2px 1.2px 1px 1px #2E86C1;
   color: white;
+  border-radius:10px;
 }
