@@ -145,7 +145,7 @@ function draw_axis(svg) {
 	// draw axis
 	var axis_svg = makeSVG('path', {
 		d: "M" + w / 2 + " " + view_h * 0.08 + "L" + w / 2 + " " + (view_h + view_h * 0.08) + "M0 " + ((view_h / 2) + (view_h * 0.08)) + " L" + w + " " + ((view_h / 2) + (view_h * 0.08)),
-		stroke: "black",
+		stroke: "#333",
 		// stroke: "#A1A1A1",
 		"stroke-width": 1
 	});
@@ -322,7 +322,7 @@ function draw_points(svg) {
 				cy: form(picked_dom_array[i].y, 'y', 2),
 				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
 				fill: most_point_color,
-				stroke: "black",
+				stroke: "rgba(0,0,0,0.4)",
 				"stroke-width": 1
 			});
 
@@ -332,7 +332,7 @@ function draw_points(svg) {
 				cy: form(picked_dom_array[i].y, 'y', 2),
 				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
 				fill: most_point_min_color,
-				stroke: "black",
+				stroke: "rgba(0,0,0,0.4)",
 				"stroke-width": 1
 			});
 
@@ -342,7 +342,7 @@ function draw_points(svg) {
 				cy: form(picked_dom_array[i].y, 'y', 2),
 				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
 				fill: top_point_color,
-				stroke: "black",
+				stroke: "rgba(0,0,0,0.4)",
 				"stroke-width": 1
 			});
 
@@ -356,7 +356,7 @@ function draw_points(svg) {
 			var text_picked = makeSVG('text', {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
-				stroke: "snow",
+				stroke: "rgba(0,0,0,0.4)",
 				"font-size": "1.3em",
 				"font-weight": "bold",
 				"stroke-width": 0.3,
@@ -367,7 +367,7 @@ function draw_points(svg) {
 			var text_picked = makeSVG('text', {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
-				stroke: "snow",
+				stroke: "rgba(0,0,0,0.4)",
 				"font-size": "1.3em",
 				"font-weight": "bold",
 				"stroke-width": 0.3,
@@ -378,7 +378,7 @@ function draw_points(svg) {
 			var text_picked = makeSVG('text', {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
-				stroke: "snow",
+				stroke: "rgba(0,0,0,0.4)",
 				"font-size": "1.3em",
 				"font-weight": "bold",
 				"stroke-width": 0.3,
@@ -405,7 +405,7 @@ function draw_points(svg) {
 		picked_dom_circle_part.onmouseout = function() {
 			if (!this.check) {
 				svg_dishes_name_array[num].style.opacity = 0;
-				svg_dishes_array[num].style.stroke = "black";
+				svg_dishes_array[num].style.stroke = "rgba(0,0,0,0.4)";
 				svg_dishes_array[num].style.strokeWidth = 1;
 			}
 		}
@@ -434,7 +434,7 @@ function draw_points(svg) {
 		circle.onmouseout = function() {
 			if (!picked_dom_array[num].check) {
 				svg_dishes_name_array[num].style.opacity = 0;
-				svg_dishes_array[num].style.stroke = "black";
+				svg_dishes_array[num].style.stroke = "rgba(0,0,0,0.4)";
 				svg_dishes_array[num].style.strokeWidth = 1;
 			}
 		}
