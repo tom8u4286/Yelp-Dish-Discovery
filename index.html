@@ -9,16 +9,18 @@
 <script type="text/javascript" src="js/btn_controll.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
 
 <title>Yelp Dish Discovery</title>
 </head>
 <body>
 <header class="header">
-	<div class="title"><font face="Comic Sans MS">Yelp Dish Discovery</font></div>
+    <div class="title"><b>Dish Discovery from Yelp Reviews</b></div>
 	<div class="menu">
 		<button class="subtitle"- id="system_id">System</button>
 		<button class="subtitle" id="overview_id">Overview</button>
-		<button class="subtitle" id="data_id">Data</button>
+		<!--<button class="subtitle" id="data_id">Data</button>-->
 		<button class="subtitle" id="about_id">About</button>
 	</div>
 </header>
@@ -46,7 +48,7 @@
 	</div>
 	<div class="popular_list">
 		<div class="score_list_avg">
-			<div class="title" id="score_avg_btn">Top Score(avg)</div>
+			<div class="title" id="score_avg_btn">Top Score (avg)</div>
 			<div class="picked"></div>
 			<div class="detail">
 				<div class="info"></div>
@@ -79,7 +81,7 @@
 			</div>
 		</div>
 		<div class="score_list_min">
-			<div class="title" id="score_min_btn">Top Score(min)</div>
+			<div class="title" id="score_min_btn">Top Score (min)</div>
 			<div class="picked"></div>
 			<div class="detail">
 				<div class="info"></div>
@@ -150,67 +152,57 @@
 <!-- create the other page here -->
 <div class="subtitle_page overview" id="overview_page_id">
 	<div class="content">
-		<div class="abstract">
-			<h1>ABSTRACT</h1>
-			Consumers nowadays are bombarded with all sorts of food
-reviews, but in fact they require a more e cient recommendation
-service. In light of this, it would be of great
-convenience if there is a system to provide analysis on the
-reveiws and return a list of recommended delicacies by others
-users. Therefore, in this paper, we propose a recommendation
-system for dishes, empirically showing that it is
-feasible to extract sentiment and opinions to a dish out of
-its context.
+		<div class="insidepanel">
+			<h2>Abstract</h2>
+This paper proposes a novel framework for automatic dish discovery via word
+embeddings on restaurant reviews. We collect a dataset of user reviews from
+Yelp and parse the reviews to extract dish words. Then, we utilize the
+processed reviews as training texts to learn the embedding vectors of words via
+the skip-gram model. In the paper, a nearest- neighbor like score function is
+proposed to rank the dishes based on their learned representations. We brief
+some analy- ses on the preliminary experiments and present a web-based
+visualization at <a href="index.html">http://clip.csie.org/yelp/</a>.
 		</div>
-		<br>
 		<hr>
-		<br>
-		<div class="introduction">
-			<h1>INTRODUCTION</h1>
-			With the growth of social media, corporations, such as
-Yelp, have accumulated a great number of user-generated
-reviews. In light of this, researches have been conducted
-with a view to nding the crucial information hidden in
-the context, aiming to nd the user's evaluation pertaining
-a certain service of an institution. Though a number
-of works have been proposed on the accurate sentiment interpretation
-towards reviews and recommendation, few has
-speci cally focus on dish-level analysis. Therefore, in this
-paper, we propose an approach and a system providing dish
-recommendation. We collect our data from Yelp Dataset
-Challenge, and after preprocessing, we transform all words
-in the corpus into high-dimension vectors, calculating the
-Euclidean distances among dishes and all the positive sentiment
-words. The results of experiments show that dishes of
-lower Euclidean distances with the positive sentiment words
-are the most recommended dishes by the users.
+		<div class="insidepanel">
+			<h2>Background</h2>
+With the growth of social media, corporations, such as Yelp, have accumulated a
+great number of user generated content (UGC). In the literature, some studies
+have been conducted with a perspective of finding critical information hidden
+in the content. While much has been proposed on accurate sentiment
+interpretation towards reviews and recommendation, little has focused on
+dish-level analysis. In this paper, therefore, we aim to provide a novel
+framework for automatic dish discovery from restaurant reviews via the
+embedding techniques. We employ regular expressions to first parse restaurant
+reviews to extract dish words, and then utilize the processed reviews as
+training texts to learn embedding vector of each word via the skip-gram model.
+In addition, a nearest-neighbor like score function is proposed to rank the
+dishes via their learned representations. Prelimi- nary experiments are
+conducted on a real-world restaurant review dataset collected from Yelp Data
+Challenge.
+		</div>
+		<hr>
+		<div class="insidepanel">
+			<h2>Dataset</h2>
+Our preliminary experiments involve a real-world restaurant review dataset
+collected from <a href="https://www.yelp.com/dataset_challenge">Yelp Data
+    Challenge</a>.
+We first choose the top 100 restaurants containing the most reviews in the area
+of Las Vegas and then manually parse the menu of each restaurant from its
+official website. 
+Out of those 100 restaurants, we winnow out the restaurants with a complete
+menu, setting the reviews of those restaurants and their menus as our dataset.
+In summary, there are 69 restaurants and 95,578 reviews in total after the
+filtering; the number of words per review in average is about 147 and the
+vocabulary size is 46,017.
+
 		</div>
 	</div>
 
 </div>
-<div class="subtitle_page data" id="data_page_id">
-	<div class="content">
-		<h1>Datasets</h1>
-		<br>
-		<div class="data_content">
-			Datasets
-We use the data distributed in Yelp Data Challenge
-1
-and
-lter out the top 100 restaurants containing the most reviews,
-and we manually parse the menu of each restaurant
-from its offcial website. Out of those 100 restaurants, we
-winnowed out the restaurants with a complete menu in LasVegas,
-setting the reviews of those restaurants and their
-menus as our dataset. The total amount of restaurants their
-reviews are 69 and 95546 respectively.
-		</div>
-		<img src="image/yelpdatset.jpg" alt="">
-	</div>
-</div>
 <div class="subtitle_page about" id="about_page_id">
 	<div class="content_big">
-		<h1>About</h1>
+		<h2>Team Members</h2>
 		<br>
 		<div class="about">
 			<div class="abouter">
@@ -258,18 +250,21 @@ reviews are 69 and 95546 respectively.
 					Department of Computer Science
 					<br>University of Taipei</div>
 			</div>
+            <a href="http://teacher.utaipei.edu.tw/~cjwang/" target=__blank>
 			<div class="abouter">
 				<img src="image/wang.png" alt="">
 				<div class="content">
 					Chuan-Ju Wang (王釧茹)
 					<br>
-					Associate Professor
+					Assistant Research Fellow
 					<br>
-					Department of Computer Science
+					Research Center for Information Technology Innovation
 					<br>
-					University of Taipei
+					Academia Sinica
 					<br></div>
 			</div>
+            </a>
+            <a href="http://www.cs.nccu.edu.tw/~mftsai/" target=__blank>
 			<div class="abouter">
 				<img src="image/tsai.png" alt="">
 				<div class="content">
@@ -277,11 +272,12 @@ reviews are 69 and 95546 respectively.
 					<br>
 					Assistant Professor
 					<br>
-					Dept. of Computer Science
+					Department of Computer Science
 					<br>
 					National Chengchi University
 					<br></div>
 			</div>
+            </a>
 		</div>
 	</div>
 </div>

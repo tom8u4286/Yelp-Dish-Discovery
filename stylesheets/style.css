@@ -8,7 +8,7 @@
 body {
   background-color: white;
   
-  font-family: Comic Sans MS;
+  font-family: Ubuntu;
   overflow: hidden;
 }
 
@@ -22,8 +22,8 @@ button {
 /* line 34, ../sass/style.scss */
 header {
   position: relative;
-  background: #385964;
-  color: white;
+  background: #21618C;
+  color: #F0F3F4;
   height: 6vh;
   padding-left: 1.5vw;
   text-align: center;
@@ -57,7 +57,7 @@ header .menu {
 }
 /* line 70, ../sass/style.scss */
 header .menu .subtitle {
-  font-family: Comic Sans MS;
+  font-family: Ubuntu;
   position: relative;
   color: white;
   margin-right: 2vw;
@@ -68,11 +68,11 @@ header .menu .subtitle {
 /* line 81, ../sass/style.scss */
 header .menu .subtitle:hover {
   cursor: pointer;
-  color: #9bacb1;
+  color: #2E86C1;
 }
 /* line 86, ../sass/style.scss */
 header .menu .subtitle:focus {
-  color: #9bacb1;
+  color: #2E86C1;
 }
 /* line 89, ../sass/style.scss */
 header .menu .subtitle:focus:after {
@@ -95,7 +95,7 @@ header .menu .subtitle:focus:after {
   height: 6vh;
   color: white;
   font-size: 2.5vh;
-  font-family: Comic Sans MS;
+  font-family: Ubuntu;
   padding-left: 1vw;
   /* 	&:focus + .rest_list {
   	left: 0px;
@@ -118,7 +118,7 @@ header .menu .subtitle:focus:after {
 /* line 129, ../sass/style.scss */
 .slide_bar_btn:hover {
   cursor: pointer;
-  color: #9bacb1;
+  color: #2E86C1;
 }
 /* line 133, ../sass/style.scss */
 .slide_bar_btn:hover:before {
@@ -132,7 +132,7 @@ header .menu .subtitle:focus:after {
   position: fixed;
   left: 0vw;
   left: -20vw;
-  background: #9bacb1;
+  background: #EBF5FB;
   display: inline-block;
   width: 20vw;
   -moz-transition: left 0.2s ease-out;
@@ -159,7 +159,7 @@ header .menu .subtitle:focus:after {
   width: 20vw;
   text-align: center;
   font-weight: bold;
-  color: #385964;
+  color: #21618C;
 }
 /* line 181, ../sass/style.scss */
 .rest_list .rest_table tbody {
@@ -167,7 +167,7 @@ header .menu .subtitle:focus:after {
   overflow: auto;
   width: 100%;
   height: 100%;
-  color: rgba(56, 89, 100, 0.8);
+  color: #2E86C1;
   font-size: 1.2vw;
 }
 /* line 190, ../sass/style.scss */
@@ -175,7 +175,7 @@ header .menu .subtitle:focus:after {
   padding: 0.3vw;
   width: 20vw;
   text-align: left;
-  color: #385964;
+  color: #21618C;
 }
 /* line 196, ../sass/style.scss */
 .rest_list .rest_table tbody tr td div {
@@ -191,12 +191,12 @@ header .menu .subtitle:focus:after {
 }
 /* line 204, ../sass/style.scss */
 .rest_list .rest_table tbody tr td div:hover {
-  background: #385964;
+  background: #21618C;
   color: white;
   cursor: pointer;
-  -moz-box-shadow: 1.2px 1.2px 1px 1px #385964;
-  -webkit-box-shadow: 1.2px 1.2px 1px 1px #385964;
-  box-shadow: 1.2px 1.2px 1px 1px #385964;
+  -moz-box-shadow: 1.2px 1.2px 1px 1px #21618C;
+  -webkit-box-shadow: 1.2px 1.2px 1px 1px #21618C;
+  box-shadow: 1.2px 1.2px 1px 1px #21618C;
 }
 
 /* line 218, ../sass/style.scss */
@@ -215,12 +215,13 @@ header .menu .subtitle:focus:after {
   position: relative;
   width: 26vw;
   display: inline-block;
-  height: 93vh;
+  background: #EAECEE;
 }
 /* line 232, ../sass/style.scss */
 .right_side .review_list .review_table {
   width: 26vw;
   height: 93vh;
+  background: #EAECEE;
 }
 /* line 237, ../sass/style.scss */
 .right_side .review_list .review_table thead tr {
@@ -234,12 +235,12 @@ header .menu .subtitle:focus:after {
   width: 26vw;
   text-align: center;
   font-weight: bold;
-  color: #385964;
+  color: #21618C;
 }
 /* line 252, ../sass/style.scss */
 .right_side .review_list .review_table tbody {
   /*font-family: "Times New Roman", Times, serif;*/
-  font-family: "Times New Roman", Times, serif;
+  font-family: Lato;
   opacity: 0;
   position: relative;
   top: 0px;
@@ -247,7 +248,7 @@ header .menu .subtitle:focus:after {
   overflow: auto;
   width: 26vw;
   height: 100%;
-  color: rgba(56, 89, 100, 0.8);
+  color: #E74C3C
   font-size: 1.2vw;
   -moz-transition: -moz-transform 0.5s;
   -o-transition: -o-transform 0.5s;
@@ -260,7 +261,7 @@ header .menu .subtitle:focus:after {
   padding: 0.3vw;
   width: 26vw;
   text-align: left;
-  color: #385964;
+  color: #154360;
 }
 /* line 275, ../sass/style.scss */
 .right_side .review_list .review_table tbody tr td div {
@@ -268,7 +269,7 @@ header .menu .subtitle:focus:after {
   text-align: justify;
   padding: 0.5vw 0;
   margin: 0 1vw;
-  border-bottom: 1px solid rgba(56, 89, 100, 0.8);
+  border-bottom: 1px solid #2E86C1;
 }
 /* line 288, ../sass/style.scss */
 .right_side .popular_list {
@@ -291,20 +292,21 @@ header .menu .subtitle:focus:after {
 }
 /* line 304, ../sass/style.scss */
 .right_side .popular_list .picked:hover {
-  background: #385964;
+  background: #21618C;
   color: white;
   cursor: pointer;
-  -moz-box-shadow: 1.2px 1.2px 1px 1px #385964;
-  -webkit-box-shadow: 1.2px 1.2px 1px 1px #385964;
-  box-shadow: 1.2px 1.2px 1px 1px #385964;
+  -moz-box-shadow: 1.2px 1.2px 1px 1px #21618C;
+  -webkit-box-shadow: 1.2px 1.2px 1px 1px #21618C;
+  box-shadow: 1.2px 1.2px 1px 1px #21618C;
 }
 /* line 313, ../sass/style.scss */
 .right_side .popular_list .detail {
-  font-size: 0.6em;
+  font-size: 1vw;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   height: 0px;
-  margin-top: -2vh;
+  margin-top: -1.5vh;
+  margin-left: 3em;
   -moz-transition: height 0.2s;
   -o-transition: height 0.2s;
   -webkit-transition: height 0.2s;
@@ -324,20 +326,20 @@ header .menu .subtitle:focus:after {
   -o-transition: opacity 0.25s, height 0.3s;
   -webkit-transition: opacity 0.25s, height 0.3s;
   transition: opacity 0.25s, height 0.3s;
-  color: #385964;
+  color: #154360;
 }
 /* line 336, ../sass/style.scss */
 .right_side .popular_list .score_list_min .title {
   cursor: pointer;
   font-size: 1.5vw;
   font-weight: bold;
-  color: #385964;
+  color: #21618C;
   text-align: center;
   padding: 1vh;
 }
 /* line 337, ../sass/style.scss */
 .right_side .popular_list .score_list_min .title:hover {
-  color: rgba(56, 89, 100, 0.8);
+  color: #2E86C1;
 }
 /* line 349, ../sass/style.scss */
 .right_side .popular_list .score_list_avg {
@@ -347,20 +349,20 @@ header .menu .subtitle:focus:after {
   -o-transition: opacity 0.25s, height 0.3s;
   -webkit-transition: opacity 0.25s, height 0.3s;
   transition: opacity 0.25s, height 0.3s;
-  color: #385964;
+  color: #154360;
 }
 /* line 357, ../sass/style.scss */
 .right_side .popular_list .score_list_avg .title {
   cursor: pointer;
   font-size: 1.5vw;
   font-weight: bold;
-  color: #385964;
+  color: #21618C;
   text-align: center;
   padding: 1vh;
 }
 /* line 358, ../sass/style.scss */
 .right_side .popular_list .score_list_avg .title:hover {
-  color: rgba(56, 89, 100, 0.8);
+  color: #2E86C1;
 }
 /* line 370, ../sass/style.scss */
 .right_side .popular_list .count_list {
@@ -370,20 +372,20 @@ header .menu .subtitle:focus:after {
   -o-transition: opacity 0.25s, height 0.3s;
   -webkit-transition: opacity 0.25s, height 0.3s;
   transition: opacity 0.25s, height 0.3s;
-  color: #385964;
+  color: #154360;
 }
 /* line 378, ../sass/style.scss */
 .right_side .popular_list .count_list .title {
   cursor: pointer;
   font-size: 1.5vw;
   font-weight: bold;
-  color: #385964;
+  color: #21618C;
   text-align: center;
   padding: 1vh;
 }
 /* line 379, ../sass/style.scss */
 .right_side .popular_list .count_list .title:hover {
-  color: rgba(56, 89, 100, 0.8);
+  color: #2E86C1;
 }
 /* line 392, ../sass/style.scss */
 .right_side .draw_place {
@@ -489,6 +491,7 @@ header .menu .subtitle:focus:after {
   background-size: 5px 5px;
   text-align: center;
   font-size: 1.2vw;
+  overflow: auto;
 }
 /* line 486, ../sass/style.scss */
 .overview .content {
@@ -496,15 +499,17 @@ header .menu .subtitle:focus:after {
   width: 70vw;
   margin: 3vh;
   margin-top: 5vh;
-  line-height: 2em;
-  color: #385964;
+  line-height: 1.5em;
+  color: #154360;
 }
 /* line 494, ../sass/style.scss */
-.overview .content h1 {
-  color: #385964;
+.overview .content h2 {
+  color: #21618C;
   margin-bottom: 3vh;
 }
-
+.content .insidepanel {
+  margin: 20pt;
+}
 /* line 501, ../sass/style.scss */
 .data {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWVlZWVlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
@@ -517,7 +522,7 @@ header .menu .subtitle:focus:after {
   background-size: 5px 5px;
   text-align: center;
   font-size: 1.2vw;
-  color: #385964;
+  color: #154360;
 }
 /* line 510, ../sass/style.scss */
 .data .content {
@@ -556,19 +561,20 @@ header .menu .subtitle:focus:after {
   background-size: 5px 5px;
   text-align: center;
   overflow: auto;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 /* line 548, ../sass/style.scss */
 .about .content_big {
   display: inline-block;
   width: 70vw;
   margin-top: 5vh;
-  line-height: 2em;
-  color: #385964;
+  line-height: 1.5em;
+  color: #154360;
 }
 /* line 555, ../sass/style.scss */
-.about .content_big h1 {
-  color: #385964;
+.content_big h2 {
+  color: #21618C;
+  margin-bottom: 3vh;
 }
 /* line 559, ../sass/style.scss */
 .about .content_big .about {
@@ -591,15 +597,15 @@ header .menu .subtitle:focus:after {
   -o-transition: box-shadow 0.1s linear;
   -webkit-transition: box-shadow 0.1s linear;
   transition: box-shadow 0.1s linear;
-  -moz-box-shadow: 1px 1px 1px 0px rgba(56, 89, 100, 0.8);
-  -webkit-box-shadow: 1px 1px 1px 0px rgba(56, 89, 100, 0.8);
-  box-shadow: 1px 1px 1px 0px rgba(56, 89, 100, 0.8);
+  -moz-box-shadow: 1px 1px 1px 0px #2E86C1;
+  -webkit-box-shadow: 1px 1px 1px 0px #2E86C1;
+  box-shadow: 1px 1px 1px 0px #2E86C1;
 }
 /* line 577, ../sass/style.scss */
 .about .abouter:hover {
-  -moz-box-shadow: 2px 2px 2px 1px rgba(56, 89, 100, 0.8);
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(56, 89, 100, 0.8);
-  box-shadow: 2px 2px 2px 1px rgba(56, 89, 100, 0.8);
+  -moz-box-shadow: 2px 2px 2px 1px #2E86C1;
+  -webkit-box-shadow: 2px 2px 2px 1px #2E86C1;
+  box-shadow: 2px 2px 2px 1px #2E86C1;
 }
 /* line 581, ../sass/style.scss */
 .about .abouter img {
@@ -724,7 +730,7 @@ header .menu .subtitle:focus:after {
 
 /* line 670, ../sass/style.scss */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(56, 89, 100, 0.4);
+  background-color: #2E86C1;
   border: 2px solid #e3e7f0;
 }
 
@@ -750,8 +756,8 @@ mark {
 /* line 691, ../sass/style.scss */
 .onfocus {
   background-color: #4b6973;
-  -moz-box-shadow: 1.2px 1.2px 1px 1px rgba(77, 109, 178, 0.8);
-  -webkit-box-shadow: 1.2px 1.2px 1px 1px rgba(77, 109, 178, 0.8);
-  box-shadow: 1.2px 1.2px 1px 1px rgba(77, 109, 178, 0.8);
+  -moz-box-shadow: 1.2px 1.2px 1px 1px #2E86C1;
+  -webkit-box-shadow: 1.2px 1.2px 1px 1px #2E86C1;
+  box-shadow: 1.2px 1.2px 1px 1px #2E86C1;
   color: white;
 }

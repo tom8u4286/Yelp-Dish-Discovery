@@ -239,15 +239,16 @@ window.onload = function(argument) {
 	overview_btn = document.getElementById('overview_id'),
 		overview_page = document.getElementById('overview_page_id');
 
-	data_btn = document.getElementById('data_id'),
-		data_page = document.getElementById('data_page_id');
+    //data_btn = document.getElementById('data_id'),
+        //data_page = document.getElementById('data_page_id');
 
 	about_btn = document.getElementById('about_id'),
 		about_page = document.getElementById('about_page_id');
 
 	system_btn = document.getElementById('system_id');
 
-	page_arary = [overview_page, data_page, about_page];
+	//page_arary = [overview_page, data_page, about_page];
+	page_arary = [overview_page, about_page];
 }
 
 /*top (avg) : #052ae1
