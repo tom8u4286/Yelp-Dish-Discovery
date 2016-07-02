@@ -224,8 +224,9 @@ function draw_axis(svg) {
 	var restaurant_title = makeSVG('text', {
 		x: (w * 0.01),
 		y: (h * 0.07),
-		fill: "#2E86C1",
-		'font-size': '1.5em'
+		fill: "#E74C3C",
+		'font-size': '1.5em',
+        "font-weight": "bold"
 	});
 	restaurant_title.innerHTML = rest_json.menu[rest_num].restaurant_name;
 	legend_rect.appendChild(restaurant_title);
@@ -321,9 +322,9 @@ function draw_points(svg) {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
 				stroke: "snow",
-				"font-size": "1.5em",
+				"font-size": "1.3em",
 				"font-weight": "bold",
-				"stroke-width": 0.5,
+				"stroke-width": 0.3,
 				fill: most_point_color
 			});
 			text_picked.innerHTML = picked_dom_array[i].name;
@@ -340,9 +341,9 @@ function draw_points(svg) {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
 				stroke: "snow",
-				"font-size": "1.5em",
+				"font-size": "1.3em",
 				"font-weight": "bold",
-				"stroke-width": 0.5,
+				"stroke-width": 0.3,
 				fill: most_point_min_color
 			});
 			text_picked.innerHTML = picked_dom_array[i].name;
@@ -359,9 +360,9 @@ function draw_points(svg) {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
 				stroke: "snow",
-				"font-size": "1.5em",
+				"font-size": "1.3em",
 				"font-weight": "bold",
-				"stroke-width": 0.5,
+				"stroke-width": 0.3,
 				fill: top_point_color
 			});
 			text_picked.innerHTML = picked_dom_array[i].name;

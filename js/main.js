@@ -214,11 +214,11 @@ window.onload = function(argument) {
 		h = 0,
 		view_h = 0,
 		extreme_value = 2,
-		good_point_color = "rgba(96,164,253,0.8)",
+		good_point_color = "rgba(84,153,199,0.8)",
 		bad_point_color = "rgba(153,2,22,0.8)",
-		top_point_color = "rgba(195,17,229,0.8)",
-		most_point_color = "rgba(5,42,225,0.8)",
-		most_point_min_color = "rgba(6,236,68,0.8)";
+		top_point_color = "rgba(247,220,111,0.8)",
+		most_point_color = "rgba(236,112,99,0.8)",
+		most_point_min_color = "rgba(22,160,133,0.8)";
 
 	rest_list_array = [],
 		picked_json_array = [],
