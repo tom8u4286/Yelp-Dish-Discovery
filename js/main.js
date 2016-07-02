@@ -185,6 +185,10 @@ window.onload = function(argument) {
 					svg_dishes_array[number].className = "";
 					svg_dishes_name_array[number].style.opacity = 1;
 					this.check = true;
+					svg_dishes_array[number].style.stroke = "red";
+					svg_dishes_array[number].style.strokeWidth = 3;
+
+
 
 					/* handle small toggle part */
 					for (var i = 0; i < detail_dom_array.length; i++) {
@@ -216,9 +220,9 @@ window.onload = function(argument) {
 		extreme_value = 2,
 		good_point_color = "rgba(96,164,253,0.8)",
 		bad_point_color = "rgba(153,2,22,0.8)",
-		top_point_color = "rgba(195,17,229,0.8)",
-		most_point_color = "rgba(5,42,225,0.8)",
-		most_point_min_color = "rgba(6,236,68,0.8)";
+		top_point_color = "rgba(255,237,237,0.8)",
+		most_point_color = "rgba(249,228,103,0.8)",
+		most_point_min_color = "rgba(107,162,216,0.8)";
 
 	rest_list_array = [],
 		picked_json_array = [],
@@ -239,8 +243,8 @@ window.onload = function(argument) {
 	overview_btn = document.getElementById('overview_id'),
 		overview_page = document.getElementById('overview_page_id');
 
-    //data_btn = document.getElementById('data_id'),
-        //data_page = document.getElementById('data_page_id');
+	//data_btn = document.getElementById('data_id'),
+	//data_page = document.getElementById('data_page_id');
 
 	about_btn = document.getElementById('about_id'),
 		about_page = document.getElementById('about_page_id');

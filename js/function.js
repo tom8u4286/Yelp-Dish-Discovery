@@ -188,11 +188,17 @@ function draw_axis(svg) {
 	g2.appendChild(legend_circle2);
 
 	var g3 = makeSVG('g', {});
-	var legend_circle3 = makeSVG('circle', {
-		cx: w * legend_x,
-		cy: h * legend_y + 25,
-		fill: good_point_color,
-		r: 5
+	/*	var legend_circle3 = makeSVG('circle', {
+			cx: w * legend_x,
+			cy: h * legend_y + 25,
+			fill: good_point_color,
+			r: 5
+		});*/
+	cross_radius = 10;
+	var legend_word = makeSVG('path', {
+		d: "M" + ((w * legend_x) - cross_radius / 2) + " " + (h * legend_y + 25) + " L" + ((w * legend_x) + cross_radius / 2) + " " + ((h * legend_y + 25) + "M" + w * legend_x) + " " + ((h * legend_y + 25) - cross_radius / 2) + "L" + (w * legend_x) + " " + ((h * legend_y + 25) + cross_radius / 2),
+		stroke: good_point_color,
+		"stroke-width": 1
 	});
 	var legend_text3 = makeSVG('text', {
 		x: (w * legend_x) + 7,
@@ -201,7 +207,8 @@ function draw_axis(svg) {
 	});
 	legend_text3.innerHTML = 'Positive Sentiment Word';
 	g3.appendChild(legend_text3);
-	g3.appendChild(legend_circle3);
+	g3.appendChild(legend_word);
+	// g3.appendChild(legend_circle3);
 
 	var g4 = makeSVG('g', {});
 	var legend_circle4 = makeSVG('circle', {
@@ -283,20 +290,20 @@ function draw_points(svg) {
 		group.appendChild(cross_good);
 		group.appendChild(text_good);
 
-		var circle_bad = makeSVG('circle', {
-			cx: form(bad_array[i].x, 'x', 2),
-			cy: form(bad_array[i].y, 'y', 2),
-			r: 5,
-			fill: bad_point_color,
-			stroke: bad_point_color,
-			"stroke-width": 2
-		});
-		var text_bad = makeSVG('text', {
-			x: form(bad_array[i].x, 'x', 2) + 10,
-			y: form(bad_array[i].y, 'y', 2) - 10,
-			fill: bad_point_color
-		});
-		text_bad.innerHTML = bad_array[i].word;
+		/*		var circle_bad = makeSVG('circle', {
+					cx: form(bad_array[i].x, 'x', 2),
+					cy: form(bad_array[i].y, 'y', 2),
+					r: 5,
+					fill: bad_point_color,
+					stroke: bad_point_color,
+					"stroke-width": 2
+				});
+				var text_bad = makeSVG('text', {
+					x: form(bad_array[i].x, 'x', 2) + 10,
+					y: form(bad_array[i].y, 'y', 2) - 10,
+					fill: bad_point_color
+				});
+				text_bad.innerHTML = bad_array[i].word;*/
 
 		// svg.appendChild(circle_bad);
 		// svg.appendChild(text_bad);
@@ -307,20 +314,48 @@ function draw_points(svg) {
 	}
 
 	// draw dishes point
-	for (var i = 0; i < picked_dom_array.length; i++) {
+	for (var i = picked_dom_array.length-1; i >= 0; i--) {
 		if (i < 5) {
 			var circle_dishes = makeSVG('circle', {
 				cx: form(picked_dom_array[i].x, 'x', 2),
 				cy: form(picked_dom_array[i].y, 'y', 2),
 				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
 				fill: most_point_color,
-				stroke: "snow",
+				stroke: "black",
 				"stroke-width": 1
 			});
+
+		} else if (i >= 5 && i < 10) {
+			var circle_dishes = makeSVG('circle', {
+				cx: form(picked_dom_array[i].x, 'x', 2),
+				cy: form(picked_dom_array[i].y, 'y', 2),
+				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
+				fill: most_point_min_color,
+				stroke: "black",
+				"stroke-width": 1
+			});
+
+		} else {
+			var circle_dishes = makeSVG('circle', {
+				cx: form(picked_dom_array[i].x, 'x', 2),
+				cy: form(picked_dom_array[i].y, 'y', 2),
+				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
+				fill: top_point_color,
+				stroke: "black",
+				"stroke-width": 1
+			});
+
+		}
+		svg_dishes_array[i] = circle_dishes;
+		circle_dishes.setAttribute('class', 'dishes_hover');
+		svg.appendChild(circle_dishes);
+	}
+	for (var i = picked_dom_array.length-1; i >= 0; i--) {
+		if (i < 5) {
 			var text_picked = makeSVG('text', {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
-				stroke: "snow",
+				stroke: "black",
 				"font-size": "1.5em",
 				"font-weight": "bold",
 				"stroke-width": 0.5,
@@ -328,18 +363,10 @@ function draw_points(svg) {
 			});
 			text_picked.innerHTML = picked_dom_array[i].name;
 		} else if (i >= 5 && i < 10) {
-			var circle_dishes = makeSVG('circle', {
-				cx: form(picked_dom_array[i].x, 'x', 2),
-				cy: form(picked_dom_array[i].y, 'y', 2),
-				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
-				fill: most_point_min_color,
-				stroke: "snow",
-				"stroke-width": 1
-			});
 			var text_picked = makeSVG('text', {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
-				stroke: "snow",
+				stroke: "black",
 				"font-size": "1.5em",
 				"font-weight": "bold",
 				"stroke-width": 0.5,
@@ -347,18 +374,10 @@ function draw_points(svg) {
 			});
 			text_picked.innerHTML = picked_dom_array[i].name;
 		} else {
-			var circle_dishes = makeSVG('circle', {
-				cx: form(picked_dom_array[i].x, 'x', 2),
-				cy: form(picked_dom_array[i].y, 'y', 2),
-				r: Math.pow(picked_dom_array[i].radius, 0.5) * 2,
-				fill: top_point_color,
-				stroke: "snow",
-				"stroke-width": 1
-			});
 			var text_picked = makeSVG('text', {
 				x: form(picked_dom_array[i].x, 'x', 2) + 10,
 				y: form(picked_dom_array[i].y, 'y', 2) - 10,
-				stroke: "snow",
+				stroke: "black",
 				"font-size": "1.5em",
 				"font-weight": "bold",
 				"stroke-width": 0.5,
@@ -366,10 +385,7 @@ function draw_points(svg) {
 			});
 			text_picked.innerHTML = picked_dom_array[i].name;
 		}
-		svg_dishes_array[i] = circle_dishes,
-			svg_dishes_name_array[i] = text_picked;
-		circle_dishes.setAttribute('class', 'dishes_hover');
-		svg.appendChild(circle_dishes);
+		svg_dishes_name_array[i] = text_picked;
 		svg.appendChild(text_picked);
 	}
 
@@ -382,10 +398,14 @@ function draw_points(svg) {
 		picked_dom_circle_part.check = false;
 		picked_dom_circle_part.onmouseover = function() {
 			svg_dishes_name_array[num].style.opacity = 1;
+			svg_dishes_array[num].style.stroke = "red";
+			svg_dishes_array[num].style.strokeWidth = 3;
 		}
 		picked_dom_circle_part.onmouseout = function() {
 			if (!this.check) {
 				svg_dishes_name_array[num].style.opacity = 0;
+				svg_dishes_array[num].style.stroke = "black";
+				svg_dishes_array[num].style.strokeWidth = 1;
 			}
 		}
 	}
@@ -407,10 +427,14 @@ function draw_points(svg) {
 		picked_dom_array[num].check = false;
 		circle.onmouseover = function() {
 			svg_dishes_name_array[num].style.opacity = 1;
+			svg_dishes_array[num].style.stroke = "red";
+			svg_dishes_array[num].style.strokeWidth = 3;
 		}
 		circle.onmouseout = function() {
 			if (!picked_dom_array[num].check) {
 				svg_dishes_name_array[num].style.opacity = 0;
+				svg_dishes_array[num].style.stroke = "black";
+				svg_dishes_array[num].style.strokeWidth = 1;
 			}
 		}
 	}
