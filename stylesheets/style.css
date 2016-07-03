@@ -531,7 +531,6 @@ header .menu .subtitle:focus:after {
   display: inline-block;
   width: 85vw;
   margin: 2vh;
-  margin-top: 5vh;
   line-height: 1.5em;
   color: #154360;
   padding-bottom: 40pt;
@@ -540,9 +539,10 @@ header .menu .subtitle:focus:after {
 .overview .content h2 {
   color: #21618C;
   margin-bottom: 3vh;
+  margin-top: 3vh;
 }
 .content .insidepanel {
-  margin: 20pt;
+  margin-bottom: 20pt;
 }
 /* line 501, ../sass/style.scss */
 .data {
@@ -601,7 +601,7 @@ header .menu .subtitle:focus:after {
 /* line 548, ../sass/style.scss */
 .about .content_big {
   display: inline-block;
-  width: 70vw;
+  width: 90vw;
   margin-top: 5vh;
   line-height: 1.5em;
   color: #154360;
@@ -618,8 +618,8 @@ header .menu .subtitle:focus:after {
 /* line 564, ../sass/style.scss */
 .about .abouter {
   margin-bottom: 5vh;
-  width: 69vw;
-  height: 40vh;
+  width: 44vw;
+  height: 30vh;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWVlZWVlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background: -moz-linear-gradient(0deg, #eeeeee 1px, #ffffff 1px);
   background: -webkit-linear-gradient(0deg, #eeeeee 1px, #ffffff 1px);
@@ -644,11 +644,18 @@ header .menu .subtitle:focus:after {
   box-shadow: 2px 2px 2px 1px #2E86C1;
   border-radius:10px;
 }
+.about .abouter:nth-child(2n+1){
+  float: left;
+}
+.about .abouter:nth-child(2n){
+  float: right;
+}
 /* line 581, ../sass/style.scss */
 .about .abouter img {
   max-height: 80%;
-  margin: 2%;
+  margin: 3.5%;
   border-radius: 25px;
+  vertical-align: middle;
 }
 /* line 587, ../sass/style.scss */
 .about .abouter:nth-child(2n+1) img {
